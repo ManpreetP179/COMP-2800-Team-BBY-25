@@ -1,0 +1,8 @@
+body {
+            background-color: lightblue;
+        }
+        #profile {
+            border-radius: 50%;
+            padding: 10px;
+            border: 2px solid crimson;
+        }
