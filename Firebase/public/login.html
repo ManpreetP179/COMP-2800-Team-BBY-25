@@ -188,7 +188,7 @@
                                 email: user.email
                             }).then(function () {
                                 console.log("New user added to firestore");
-                                window.location.assign("profile.html");
+                                window.location.assign("mainPage.html");
                             })
                             .catch(function (error) {
                                 console.log("Error adding new user: " + error);
@@ -206,7 +206,7 @@
             },
             // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
             signInFlow: 'popup',
-            signInSuccessUrl: 'profile.html',
+            signInSuccessUrl: 'mainPage.html',
             signInOptions: [
                 // Leave the lines as is for the providers you want to offer your users.
                 //firebase.auth.GoogleAuthProvider.PROVIDER_ID,
@@ -217,9 +217,9 @@
                 //firebase.auth.PhoneAuthProvider.PROVIDER_ID
             ],
             // Terms of service url.
-            tosUrl: 'profile.html',
+            tosUrl: 'mainPage.html',
             // Privacy policy url.
-            privacyPolicyUrl: 'profile.html',
+            privacyPolicyUrl: 'mainPage.html',
             accountChooserEnabled: false
         };
         // The start method will wait until the DOM is loaded.
