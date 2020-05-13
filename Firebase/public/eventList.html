@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="styles/eventsListPage.css" type="text/css">
         <link rel="apple-touch-icon" sizes="152x152" href="favicon_package_v0.16 (1)/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="favicon_package_v0.16 (1)/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="favicon_package_v0.16 (1)/favicon-16x16.png">
@@ -34,11 +34,26 @@
                 <li><a href="aboutUs.html">About us</a></li>
               </ul>
             </div>
-          </nav>
+        </nav>
+        <h1>Events</h1>
         <div class="container">
-            <h1>Events</h1>
+            <div id="event"></div>    
         </div>
-        
+        <script>
+            document.addEventListener("DOMContentLoaded", event => {
+              const app = firebase.app();
+
+              const db = firebase.firestore();
+
+              const events = db.collection('events').doc('oK79uysjfVsCYZQ8KeON');
+
+              events.onSnapshot(doc => {
+                  const data = doc.data();
+                  document.write('<div class="events">' + data.title + '</div>')
+              })
+            });
+        </script>
+
         <!-- update the version number as needed -->
         <script defer src="/__/firebase/7.14.2/firebase-app.js"></script>
         <!-- include only the Firebase features as you need -->
