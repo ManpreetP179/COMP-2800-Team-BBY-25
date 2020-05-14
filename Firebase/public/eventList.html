@@ -39,26 +39,7 @@
         <div class="container">
             <div id="event"></div>    
         </div>
-        <script>
-            getActivities();
-            
-            var arr = localStorage.getItem("arr");
-            
-            console.log("this is arr: " + arr);
-            console.log(arr.length);
-            
-            function getActivities() {
-              firebase.auth().onAuthStateChanged(function(user) {
-                db.collection("events").doc(user.uid)
-                .onSnapshot(function(snap) {
-                  x = snap.data().arr;
-                  console.log(x);
-                  localStorage.setItem("arr", x);
-                });
-              });
-            }
-        </script>
-
+        
         <!-- update the version number as needed -->
         <script defer src="/__/firebase/7.14.2/firebase-app.js"></script>
         <!-- include only the Firebase features as you need -->
@@ -83,6 +64,25 @@
             measurementId: "G-measurement-id",
           };
         </script>
-        <script src="app.js"></script>
+
+        <script>
+            getActivities();
+            
+            var arr = localStorage.getItem("arr");
+            
+            console.log("this is arr: " + arr);
+            console.log(arr.length);
+            
+            function getActivities() {
+              firebase.auth().onAuthStateChanged(function(user) {
+                db.collection("events").doc(user.uid)
+                .onSnapshot(function(snap) {
+                  x = snap.data().arr;
+                  console.log(x);
+                  localStorage.setItem("arr", x);
+                });
+              });
+            }
+        </script>
     </body>
 </html>
