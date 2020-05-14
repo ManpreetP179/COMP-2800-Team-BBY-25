@@ -40,18 +40,23 @@
             <div id="event"></div>    
         </div>
         <script>
-            document.addEventListener("DOMContentLoaded", event => {
-              const app = firebase.app();
-
-              const db = firebase.firestore();
-
-              const events = db.collection('events').doc('oK79uysjfVsCYZQ8KeON');
-
-              events.onSnapshot(doc => {
-                  const data = doc.data();
-                  document.write('<div class="events">' + data.title + '</div>')
-              })
-            });
+            getActivities();
+            
+            var arr = localStorage.getItem("arr");
+            
+            console.log("this is arr: " + arr);
+            console.log(arr.length);
+            
+            function getActivities() {
+              firebase.auth().onAuthStateChanged(function(user) {
+                db.collection("events").doc(user.uid)
+                .onSnapshot(function(snap) {
+                  x = snap.data().arr;
+                  console.log(x);
+                  localStorage.setItem("arr", x);
+                });
+              });
+            }
         </script>
 
         <!-- update the version number as needed -->
