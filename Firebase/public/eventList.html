@@ -48,27 +48,8 @@
         <script defer src="/__/firebase/7.14.2/firebase-messaging.js"></script>
         <script defer src="/__/firebase/7.14.2/firebase-storage.js"></script>
         <script defer src="/__/firebase/7.14.2/firebase-firestore.js"></script>
-        <!-- initialize the SDK after all desired features are loaded -->
-        <script defer src="/Firebase/public/scripts/firebase.js"></script>
+        
+        <script src="/Firebase/public/scripts/events.js"></script>
 
-        <script>
-            getActivities();
-            
-            var arr = localStorage.getItem("arr");
-            
-            console.log("this is arr: " + arr);
-            console.log(arr.length);
-            
-            function getActivities() {
-              firebase.auth().onAuthStateChanged(function(user) {
-                db.collection("events").doc(user.uid)
-                .onSnapshot(function(snap) {
-                  x = snap.data().arr;
-                  console.log(x);
-                  localStorage.setItem("arr", x);
-                });
-              });
-            }
-        </script>
     </body>
 </html>
