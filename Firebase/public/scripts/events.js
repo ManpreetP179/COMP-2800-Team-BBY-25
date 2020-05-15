@@ -4,7 +4,7 @@ function showEvents() {
 
     let num = 0;
 
-    db.collection("events").where("user", "==", myUser)
+    db.collection("events")
         .get()
         .then(function (querySnapshot) {
             console.log("in then");
@@ -57,7 +57,6 @@ function showEvents() {
         .catch(function (error) {
             console.log("Error getting documents", error);
         });
-
 
 
 }
