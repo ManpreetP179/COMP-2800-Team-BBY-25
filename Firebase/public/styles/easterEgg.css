@@ -1,0 +1,11 @@
+#scissors {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+  }
+
+  #easterImg {
+    width: 1px;
+    transition: all 2s;
+  }
+

@@ -22,7 +22,7 @@ function showEvents() {
 
                 num++;
 
-                let date = myDoc.Date;
+            /*    let date = myDoc.Date;
                 let description = myDoc.Desc;
                 let duration = myDoc.Duration;
                 let location = myDoc.Location;
@@ -36,7 +36,7 @@ function showEvents() {
                 console.log(location);
                 console.log(time);
                 console.log(topic);
-                console.log(host);
+                console.log(host);   */
 
                 let myHtml = `
                 <div style="border: 1px solid crimson; padding:10px">
