@@ -1,6 +1,9 @@
 body {
     background-color: lightblue;
 }
+.container{
+    border: 2px solid white;
+}
 .events{
     background-color: white;
     border-radius: 3px;
