@@ -1,31 +1,62 @@
-var firebaseConfig = {
-    apiKey: "AIzaSyDfdy4eeQA-kzFh5U-6Dl9dsvCxJCiYU2I",
-    authDomain: "team25-52eec.firebaseapp.com",
-    databaseURL: "https://team25-52eec.firebaseio.com",
-    projectId: "team25-52eec",
-    storageBucket: "team25-52eec.appspot.com",
-    messagingSenderId: "744979759825",
-    appId: "1:744979759825:web:fdb78ef312d8ea8370fbf0"
-};
+function showEvents() {
+    console.log("in event lists");
+    let events = false;
 
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();
+    let num = 0;
 
-getActivities();
-            
-var arr = localStorage.getItem("arr");
-            
-console.log("this is arr: " + arr);
-console.log(arr.length);
-            
-function getActivities() {
-    firebase.auth().onAuthStateChanged(function(user) {
-        db.collection("events").doc(user.uid)
-        .onSnapshot(function(snap) {
-            x = snap.data().arr;
-            console.log(x);
-            localStorage.setItem("arr", x);
+    db.collection("events")
+        .get()
+        .then(function (querySnapshot) {
+            console.log("in then");
+            querySnapshot.forEach(function (doc) {
+                console.log("in for each");
+                events = true;
+                let myDoc = doc.data();
+                console.log(myDoc);
+
+                num++;
+
+                let date = myDoc.Date;
+                let description = myDoc.Desc;
+                let duration = myDoc.Duration;
+                let location = myDoc.Location;
+                let time = myDoc.Time;
+                let topic = myDoc.Topic;
+                let host = myDoc.host;
+
+                console.log(date);
+                console.log(description);
+                console.log(duration);
+                console.log(location);
+                console.log(time);
+                console.log(topic);
+                console.log(host);
+
+                let myHtml = `
+                    <div id="events">
+                        <h1><b><u> Event ${num} </u></b></h1>
+                        <h1><b>Date:  </b> ${myDoc.Date} <h1>
+                        <h1><b>Description:  </b> ${myDoc.Desc} </h1>
+                        <h1><b>Duration:  </b> ${myDoc.Duration} </h1>
+                        <h1><b>Location:  </b> ${myDoc.Location} </h1>
+                        <h1><b>Time:  </b> ${myDoc.Time} </h1>
+                        <h1><b>Topic:  </b> ${myDoc.topic} </h1>
+                        <h1><b>Host:  </b> ${myDoc.host} </h1>
+                    </div>
+                `
+                $('#container').append(myHtml);
+
+            });
+        })
+        .then(function () {
+            if (events == false) {
+                console.log("No events created yet");
+                $("#container").append('<h3>No events created yet</h3>')
+            }
+        })
+        .catch(function (error) {
+            console.log("Error getting documents", error);
         });
-    });
+
+
 }

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Profile</title>
+    <title>Created Events</title>
     <meta name="comp1800 boilerplate code" content="my bcit project">
     <meta name="author" content="BCIT">
 
@@ -28,7 +28,7 @@
     <!------------------------>
     <!-- Your own CSS files -->
     <!------------------------>
-    <link rel="stylesheet" href="styles/profile.css">   
+    <link rel="stylesheet" href="styles/createdEvents.css">   
     
 
 </head>
@@ -55,18 +55,11 @@
         </div>
       </nav>
     <div id="outerDiv" class="container">
-            <br>
-            <h1>Hello, <span id="user"></span></h1>
-            <br>
-            <h2>Your Profile</h2>
-            <br><hr><br>
-            <img id="profile" src="images/profile.png" alt="Profile picture">
-            <div class="container">
-                <br><br>
-                <h4><b>Name: </b><span id="name"></span></h4><br>
-                <h4><b>Email: </b><span id="email"></span></h4>
-            </div><hr>
-            <h3><a href="createdEvents.html">Events created by you</a></h3><br>
+            <h1>Events you created</h1> 
+            <a href="profile.html">Go back to profile</a><br><hr>
+
+            <div id="myDiv"></div>
+
     </div>   
 
     <!----------------------------------------------->
@@ -86,14 +79,16 @@
     <!--------------------------------------------------------------------->
     <!-- JS files: Your own JavaScript functions included here    -->
     <!--------------------------------------------------------------------->
-    <script src="scripts/profile.js"></script>
+    <script src="scripts/createdEvents.js"></script>
 
      <!--------------------------------------------------------------------->
     <!-- Make calls to your own JavaScript functions, here below-->
     <!---------------------------------------------------------------------->
 
-    
-    
+    <script>
+        showEvents();
+         
+    </script>
 
 </body>
 

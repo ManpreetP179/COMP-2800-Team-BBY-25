@@ -1,11 +1,16 @@
 body {
     background-color: lightblue;
 }
-.events{
+.container{
+    border: 2px solid white;
+}
+#events{
     background-color: white;
     border-radius: 3px;
     -moz-box-shadow:    3px 3px 5px 6px #ccc;
     -webkit-box-shadow: 3px 3px 5px 6px #ccc;
     box-shadow:         3px 3px 5px 6px #ccc;
-    
+    width: 500px;
+    height: 400px;
+    background: ghostwhite;
 }
