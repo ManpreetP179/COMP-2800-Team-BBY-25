@@ -1,39 +1,19 @@
 function showEvents() {
-    console.log("in event lists");
-    let events = false;
+    firebase.auth().onAuthStateChanged(function() {
+        let num = 0;
+        
+        db.collection("events").get()
+            .then(function(querySnapshot) {
+                querySnapshot.forEach(function(doc) {
+                    console.log("in for each");
+                    events = true;
+                    let myDoc = doc.data();
+                    console.log(myDoc);
 
-    let num = 0;
+                    num++;
 
-    db.collection("events")
-        .get()
-        .then(function (querySnapshot) {
-            console.log("in then");
-            querySnapshot.forEach(function (doc) {
-                console.log("in for each");
-                events = true;
-                let myDoc = doc.data();
-                console.log(myDoc);
-
-                num++;
-
-                let date = myDoc.Date;
-                let description = myDoc.Desc;
-                let duration = myDoc.Duration;
-                let location = myDoc.Location;
-                let time = myDoc.Time;
-                let topic = myDoc.Topic;
-                let host = myDoc.host;
-
-                console.log(date);
-                console.log(description);
-                console.log(duration);
-                console.log(location);
-                console.log(time);
-                console.log(topic);
-                console.log(host);
-
-                let myHtml = `
-                    <div id="events">
+                    let myHtml = `
+                    <div style="border: 1px solid crimson; padding:10px">
                         <h1><b><u> Event ${num} </u></b></h1>
                         <h1><b>Date:  </b> ${myDoc.Date} <h1>
                         <h1><b>Description:  </b> ${myDoc.Desc} </h1>
@@ -43,20 +23,23 @@ function showEvents() {
                         <h1><b>Topic:  </b> ${myDoc.topic} </h1>
                         <h1><b>Host:  </b> ${myDoc.host} </h1>
                     </div>
-                `
-                $('#container').append(myHtml);
+                        `
+
+                    $('#events').append(myHtml);
 
             });
         })
-        .then(function () {
-            if (events == false) {
+        .then(function() {
+            if(events == false) {
                 console.log("No events created yet");
                 $("#container").append('<h3>No events created yet</h3>')
             }
         })
-        .catch(function (error) {
+        .catch(function(error) {
             console.log("Error getting documents", error);
         });
+
+    });
 
 
 }
