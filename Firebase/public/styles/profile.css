@@ -1,8 +1,38 @@
 body {
-            background-color: lightblue;
-        }
-        #profile {
-            border-radius: 50%;
-            padding: 10px;
-            border: 2px solid crimson;
-        }
+    background-color: lightblue;
+}
+
+#outerDiv {
+    background-color: blue;
+    padding: 2vw;
+}
+
+#innerDiv {
+    background-color: lightcyan;
+    
+}
+
+#innermostDiv {
+    
+    text-align: center;
+}
+
+#profileDiv {
+    background-color: lightblue;
+}
+
+#profile {
+    border-radius: 50%;
+    padding: 10px;
+    border: 2px solid blue;
+}
+
+hr {
+    border: 1px solid blue;
+}
+
+@media (min-width: 770px) {
+    #innermostDiv {
+        display: flex;
+    }
+}
