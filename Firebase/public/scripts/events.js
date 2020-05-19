@@ -32,7 +32,7 @@ function showEvents() {
         .then(function() {
             if(events == false) {
                 console.log("No events created yet");
-                $("#container").append('<h3>No events created yet</h3>')
+                $(".container").append('<h3>No events created yet</h3>')
             }
         })
         .catch(function(error) {
