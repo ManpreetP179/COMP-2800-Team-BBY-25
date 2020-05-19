@@ -81,6 +81,8 @@
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase.js"></script>
     <script src="scripts/firebase.js"> </script>
   
     <!--------------------------------------------------------------------->
@@ -91,10 +93,60 @@
      <!--------------------------------------------------------------------->
     <!-- Make calls to your own JavaScript functions, here below-->
     <!---------------------------------------------------------------------->
+<table id="List">
+  <tbody>
+
+  </tbody>
+
+</table>
+
+
+
+
 
     <script>
-        showProfile();
+
+      var storage = firebase.storage();
+      var storageRef  = storage.ref();
+
+      $('#List').find('tbody').html('');
+
+      var i =0;
+
+     storageRef.child('images/').listAll().then(function(result){
+       result.items.forEach(function(imageRef){
+
+         i++
+         displayImage(i, imageRef);
+       
+       });
+     });
+function displayImage(row, images){
+  images.getDownloadURL().then(function(url){
+    console.log(url);
+
+    let new_html = '';
+    new_html += '<tr>';
+    new_html += '<td>';
+    new_html += row;
+    new_html += '</td>';
+    new_html += '<img src= " '+url+' " width="100px" style= "float:right">';
+    new_html += '</td>';
+    new_html += '</tr>';
+$('#List').find('tbody').append(new_html);
+
+
+
+
+
+
+
+  });
+}
+
+
     </script>
+    
 
 </body>
 
