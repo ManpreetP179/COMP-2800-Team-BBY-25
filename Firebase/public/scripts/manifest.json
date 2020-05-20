@@ -1,0 +1,9 @@
+{
+    "name": "Together At Home",
+    "short_name": "Together At Home",
+    "start_url": "/privateMessage.html",
+    "display": "standalone",
+    "orientation": "portrait",
+    "gcm_sender_id": "103953800507"
+  }
+  
