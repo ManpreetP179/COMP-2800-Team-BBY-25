@@ -5,4 +5,19 @@ body {
             border-radius: 50%;
             padding: 10px;
             border: 2px solid crimson;
+            margin-left: 500px;
         }
+        .fixed-bg {
+            background-image: url("https://cutewallpaper.org/21/city-night-hd/City-Lights-at-Night-Wallpapers-Top-Free-City-Lights-at-.jpg");
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height:1000px;
+
+          }
+          #outerDiv {
+              background-color: skyblue;
+              
+
+          }
