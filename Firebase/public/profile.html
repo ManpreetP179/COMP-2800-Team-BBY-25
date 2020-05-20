@@ -54,20 +54,30 @@
           </ul>
         </div>
       </nav>
+      <div class="fixed-bg">
+        <br><br><br><br><br><br><br><br><br>
     <div id="outerDiv" class="container">
+        <div id="innerDiv" class="container">
             <br>
             <h1>Hello, <span id="user"></span></h1>
             <br>
             <h2>Your Profile</h2>
-            <br><hr><br>
-            <img id="profile" src="images/profile.png" alt="Profile picture">
-            <div class="container">
-                <br><br>
+            <hr>
+          <div class="container" id="innermostDiv">
+            <div class="container" id="profileDiv"><br>
+            <img id="profile" src="images/profile1.png" alt="Profile picture">
+            
+                <br>
                 <h4><b>Name: </b><span id="name"></span></h4><br>
                 <h4><b>Email: </b><span id="email"></span></h4>
             </div><hr>
-            <h3><a href="createdEvents.html">Events created by you</a></h3><br>
-    </div>   
+            <div id="other" class="container">
+              <a href="createdEvents.html"><button type="button" id="btn1">Events created by you</button></a><br>
+            </div>
+          </div>
+            <br>
+        </div>
+    </div><br>   
 
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, API related    -->

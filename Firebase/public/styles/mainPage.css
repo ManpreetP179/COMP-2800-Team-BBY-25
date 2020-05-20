@@ -1,7 +1,4 @@
 
-body {
-    background-color: lightblue;
-}
 #footer {
     position: relative;
     left: 0;
@@ -78,4 +75,124 @@ body {
   }
   #info1 {
       text-align: left;
+  }
+  #myCarousel {
+    height:300px;
+    width:1000px;
+  }
+  .fixed-bg {
+    background-image: url("https://images.squarespace-cdn.com/content/56f49c3e5559866730b9e03f/1510423188479-LJJL5JOP6VGO4L67HZXO/Casual-young-people-1_.jpg?content-type=image%2Fjpeg");
+    min-height: 600px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #main {
+    background-image: url(https://cdn2.vectorstock.com/i/1000x1000/25/26/abstract-backgrounds-geometric-shape-pattern-vector-5862526.jpg);
+    height:600px;
+    width:100%;
+
+  }
+  #content {
+    height:500px;
+    width:1300px;
+    background-color:lightskyblue;
+    margin-left: 100px;
+  
+  
+      
+  }
+  #head {
+    background-color: white;
+    opacity: 0.4;
+    height:500px;
+    width:600px;
+    margin-left:800px;
+  }
+  h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    margin-left: 100px
+    
+  }
+  #heading {
+font-weight: bolder;
+margin-left: 530px;
+  }
+  #head1 {
+    color:darkblue;
+    margin-left: 510px;
+  }
+  h3{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+  }
+  #features {
+    background-color: white;
+  }
+  #feature {
+    display:grid;
+  grid-template-columns: 760px 400px;
+  background-color: whitesmoke;
+  color:darkblue;
+  }
+  #img1,#img2,#img3 {
+    height:400px;
+    width:760px;
+  }
+  #create_event{
+    color:black;
+    font-size:large;
+    font-weight:bold;
+  }
+  #view_schedule {
+    color:black;
+  font-size: large;
+  font-weight:bold;
+  }
+  #social_media {
+    color:black;
+    font-size: large;
+    font-weight:bold;
+  }
+  #btn2,#btn3,#btn4 {
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: skyblue;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    width:300px;
+    height:50px;
+  }
+   
+  #btn2:hover {background-color:darkblue}
+  
+  #btn2:active {
+    background-color:lightblue;
+    box-shadow: 0 5px lightcyan;
+    transform: translateY(4px);
+  }
+   
+  #btn3:hover {background-color:darkblue}
+  
+  #btn3:active {
+    background-color:lightblue;
+    box-shadow: 0 5px lightcyan;
+    transform: translateY(4px);
+  }
+  #btn4:hover {background-color:darkblue}
+  
+  #btn4:active {
+    background-color:lightblue;
+    box-shadow: 0 5px lightcyan;
+    transform: translateY(4px);
+  }
+  #easteregg {
+    background-color: white;
   }

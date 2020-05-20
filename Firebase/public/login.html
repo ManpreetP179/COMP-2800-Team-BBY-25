@@ -15,6 +15,7 @@
     <!----------------------------------------------->
     <!-- CSS: Bootstrap, Firebase, other API -->
     <!----------------------------------------------->
+    <link rel="stylesheet" href="styles/login.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="apple-touch-icon" sizes="152x152" href="favicon_package_v0.16 (1)/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon_package_v0.16 (1)/favicon-32x32.png">
@@ -24,100 +25,10 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    
    
-    <!------------------------>
-<style> 
-    @media (min-width: 400px) and (max-width: 1024px){
-        
-        body{
-        background-color:lightblue;
-        
-    }
+
     
-    h1 {
-        text-align: center;
-        margin-bottom: 100px;
-    }
-    
-    h2 {
-        text-align: center;
-    }
-    
-    #firebaseui-auth-container{
-        margin-top: 30px;
-        border: 3px solid black;
-        width:300px;
-        margin-left: 340px;
-       align-self: center;
-        position:absolute;
-        
-    }
-    
-        
-        
-        
-        
-        
-        
-    }
-    
-    @media screen and (min-width: 1024px){
-        
-         body{
-        background-color:cornflowerblue;
-        
-    }
-    
-    h1 {
-        text-align: center;
-        margin-bottom: 100px;
-    }
-    
-    h2 {
-        text-align: center;
-    }
-    
-    #firebaseui-auth-container{
-        margin-top: 30px;
-        border: 3px solid black;
-        width:300px;
-        margin-left: 400px;
-    }
-    
-        
-        
-    }
-    
-    
-    
-    @media screen and (max-width: 399px) {
-    
-    body{
-        background-color:cornflowerblue;
-        
-    }
-    
-    h1 {
-        text-align: center;
-        margin-bottom: 100px;
-    }
-    
-    h2 {
-        text-align: center;
-    }
-    
-    #firebaseui-auth-container{
-        margin-top: 30px;
-        border: 3px solid black;
-        width:300px;
-        margin-left: 40px;
-    }
-    
-        
-    }
-    </style>
-    <!------------------------
-    <link rel="stylesheet" href="styles/style.css">   -->
 
 </head>
 <body>
@@ -127,8 +38,10 @@
 
     <h1>Welcome to Together at Home!</h1>
     <h2>Please Login </h2>
-    <div id="firebaseui-auth-container"></div>
-    <div id="loader">Loading...</div>    
+    <div id="firebaseui-auth-container"><br></div>
+
+    <div id="loader">Loading...</div>   
+     
 
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, API related    -->
