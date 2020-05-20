@@ -1,6 +1,6 @@
 {
-    "name": "Together At Home",
-    "short_name": "Together At Home",
+    "name": "Team 25",
+    "short_name": "Team 25",
     "start_url": "/privateMessage.html",
     "display": "standalone",
     "orientation": "portrait",
