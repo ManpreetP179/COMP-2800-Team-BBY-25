@@ -1,5 +1,6 @@
 html, body {
     font-family: 'Roboto', 'Helvetica', sans-serif;
+    background: skyblue;
   }
   main, #messages-card {
     height: 100%;
@@ -174,10 +175,10 @@ html, body {
     }
   }
   .mdl-textfield__label:after {
-    background-color: #0288D1;
+    background-color: black;
   }
   .mdl-textfield--floating-label.is-focused .mdl-textfield__label {
-    color: #0288D1;
+    color: black;
   }
   .mdl-button .material-icons {
     top: -1px;
