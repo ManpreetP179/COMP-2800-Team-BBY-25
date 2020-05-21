@@ -1,32 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
-  
-    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
-
-    <!--Favicon-->
-    <link rel="apple-touch-icon" sizes="152x152" href="favicon_package_v0.16 (1)/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon_package_v0.16 (1)/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon_package_v0.16 (1)/favicon-16x16.png">
-    <link rel="manifest" href="favicon_package_v0.16 (1)/site.webmanifest">
-    <link rel="mask-icon" href="favicon_package_v0.16 (1)/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    
+   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/mainPage.css" type="text/css">
+  <link rel="stylesheet" href="styles/easterEgg.css" type="text/css">   
+ 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="apple-touch-icon" sizes="152x152" href="favicon_package_v0.16 (1)/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_package_v0.16 (1)/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon_package_v0.16 (1)/favicon-16x16.png">
+  <link rel="manifest" href="favicon_package_v0.16 (1)/site.webmanifest">
+  <link rel="mask-icon" href="favicon_package_v0.16 (1)/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="styles/postForm.css"> 
     <style>
     
-        #uploader {
-           -webkit-appearance: none;
-            appearance: none;
-            width:50%;
-        }
-        
-         body{  
-         background-color:powderblue;   
-            
-            
-        }
+      
     
     
     
@@ -56,26 +50,27 @@
             <li><a href="eventsPage.html">Create Events</a></li>
             <li><a href="eventList.html">Events</a></li>
             <li><a href="#">Schedule</a></li>
-            <li><a href="postForm.html">Social Media</a></li>
+            <li><a href="socialMedia.html">Social Media</a></li>
             <li><a href="aboutUs.html">About us</a></li>
             <li><a href="privateMessage.html">Messages</a></li>
           </ul>
         </div>
         </nav>
+        <h1> Please post a picture you'd like to share</h1>
     
     <div class="container">
        
                         <div class="form-group">
                             <img id="photo" class="rounded-circle mx-auto d-block border border-primary"
                                 src="upload.png"
-                                style="max-width: 150px; margin-left: 285px; max-height: 150px; border: px solid cornsilk!important; ">
+                                style="max-width: 150px; margin-left: 285px;  border: px solid cornsilk!important; ">
                             <input type="file" id="file" style="display: none;">
                         </div>
                         
 <!--                       
 <!--                        click to finish profile-->
                         <div class="form-group text-center">
-                            <button type="button" class="btn btn-primary"> Post picture</button>
+                            <button type="button" class="btn-primary"> Post picture</button>
                         </div>
                     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous">
@@ -208,10 +203,15 @@
             }
         });        
     </script>
+    <h2>Posts can be seen in the Social Media page.</h2>
     
     
+
+    <!-- <div class="container">
+=======
     
  <!--   <div class="container">
+>>>>>>> dac8984ffec95fa3315cfbd1a3a19ee4d26724d0
         <br><br>
         <h2>Enter details to post</h2>
         <br><hr><br>
@@ -225,8 +225,8 @@
         
             <div class="form-group row">
                 <div class="col-sm-10 offset-sm-2">
-                    <button type="button" class="btn btn-danger">Cancel</button>
-                    <button type="button" class="btn btn-success" id="post">Post</button>
+                    <button type="button" class="btn-danger">Cancel</button>
+                    <button type="button" class="btn-success" id="post">Post</button>
                 </div>
             </div>
         </form>   
@@ -260,7 +260,11 @@
 
 
     
+
+    </script> 
+
     </script>    -->
+
 
     
     
