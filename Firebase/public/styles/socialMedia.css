@@ -19,6 +19,10 @@ hr {
     border: 1px solid darkblue;
 }
 
+#like:active {
+    background-color: pink;
+}
+
 @media (min-width: 770px) {
     #postDiv {
         display: grid;

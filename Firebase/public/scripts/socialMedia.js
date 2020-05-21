@@ -34,6 +34,8 @@ new_html += '</tr>';
 let myImg = `
 <div><br>
   <img src="${url}" width="90%" height="90%"><br>
+  <button id="like">Like</button>
+  <br>
 </div>
 `;
 
