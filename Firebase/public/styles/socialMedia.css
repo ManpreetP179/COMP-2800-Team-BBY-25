@@ -1,0 +1,31 @@
+body {
+    background-color: lightblue;
+}
+
+#post {
+    float: right;
+}
+
+#outer {
+    background-color: #3D5A85;
+    padding: 2vw;
+}
+
+#outerDiv {
+    background-color: lightcyan;
+}
+
+hr {
+    border: 1px solid darkblue;
+}
+
+#like:active {
+    background-color: pink;
+}
+
+@media (min-width: 770px) {
+    #postDiv {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
