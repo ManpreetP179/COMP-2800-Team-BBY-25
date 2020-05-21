@@ -1,3 +1,9 @@
+<style>
+    .list {
+
+    }
+</style>
+
 function showEvents() {
     firebase.auth().onAuthStateChanged(function() {
         let num = 0;
@@ -13,7 +19,7 @@ function showEvents() {
                     num++;
 
                     let myHtml = `
-                    <div style="border: 1px solid crimson; padding:10px">
+                    <li class="list">
                         <h1><b><u> Event ${num} </u></b></h1>
                         <h1><b>Date:  </b> ${myDoc.Date} <h1>
                         <h1><b>Description:  </b> ${myDoc.Desc} </h1>
@@ -22,7 +28,7 @@ function showEvents() {
                         <h1><b>Time:  </b> ${myDoc.Time} </h1>
                         <h1><b>Topic:  </b> ${myDoc.topic} </h1>
                         <h1><b>Host:  </b> ${myDoc.host} </h1>
-                    </div>
+                    </li>
                         `
 
                     $('#events').append(myHtml);
