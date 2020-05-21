@@ -1,16 +1,17 @@
 body {
-    background-color: lightblue;
-}
-.container{
-    border: 2px solid white;
+    background-color: skyblue;
+    font-family: 'Roboto', 'Helvetica', sans-serif;
 }
 #events{
-    background-color: white;
-    border-radius: 3px;
-    -moz-box-shadow:    3px 3px 5px 6px #ccc;
-    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
-    box-shadow:         3px 3px 5px 6px #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 5px 10px #888888;
     width: 500px;
     height: 400px;
-    background: ghostwhite;
+    list-style-type: none;
+    display: inline-block;
+    background: #b19cd9;
+}
+#title {
+    text-align: center;
 }
