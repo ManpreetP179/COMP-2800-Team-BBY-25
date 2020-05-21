@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Created Events</title>
+    <title>Social Media</title>
     <meta name="comp1800 boilerplate code" content="my bcit project">
     <meta name="author" content="BCIT">
 
@@ -28,7 +28,7 @@
     <!------------------------>
     <!-- Your own CSS files -->
     <!------------------------>
-    <link rel="stylesheet" href="styles/createdEvents.css">   
+    <link rel="stylesheet" href="styles/socialMedia.css">   
     
 
 </head>
@@ -49,19 +49,21 @@
             <li><a href="eventsPage.html">Create Events</a></li>
             <li><a href="eventList.html">Events</a></li>
             <li><a href="#">Schedule</a></li>
-            <li><a href="socialMedia.html">Social Media</a></li>
+            <li><a href="postForm.html">Social Media</a></li>
             <li><a href="aboutUs.html">About us</a></li>
-            <li><a href="privateMessage.html">Messages</a></li>
           </ul>
         </div>
       </nav>
-    <div id="outerDiv" class="container">
-            <h1>Events you created</h1> 
-            <a href="profile.html">Go back to profile</a><br><hr>
 
-            <div id="myDiv"></div>
+    <div id="outer" class="container">
+      <div id="outerDiv" class="container">
+        <h1>Social Media</h1>
+        <h3>Posts <span><a href="postForm.html"><button id="post">Post Picture</button></a></span></h3>
+        <hr>
+        <div id="postDiv" class="container"></div>
+      </div>
+    </div>
 
-    </div>   
 
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, API related    -->
@@ -75,23 +77,22 @@
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase.js"></script>
     <script src="scripts/firebase.js"> </script>
   
     <!--------------------------------------------------------------------->
     <!-- JS files: Your own JavaScript functions included here    -->
     <!--------------------------------------------------------------------->
-    <script src="scripts/createdEvents.js"></script>
+    <script src="scripts/socialMedia.js"></script>
 
-     <!--------------------------------------------------------------------->
+    <!--------------------------------------------------------------------->
     <!-- Make calls to your own JavaScript functions, here below-->
     <!---------------------------------------------------------------------->
-
     <script>
-        showEvents();  
+        showImages();
     </script>
 
 </body>
-
-
 
 </html>

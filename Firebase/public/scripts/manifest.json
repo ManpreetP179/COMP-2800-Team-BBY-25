@@ -1,0 +1,9 @@
+{
+    "name": "Team 25",
+    "short_name": "Team 25",
+    "start_url": "/privateMessage.html",
+    "display": "standalone",
+    "orientation": "portrait",
+    "gcm_sender_id": "103953800507"
+  }
+  

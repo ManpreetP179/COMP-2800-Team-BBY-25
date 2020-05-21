@@ -13,7 +13,7 @@ function showEvents() {
                     num++;
 
                     let myHtml = `
-                    <div style="border: 1px solid crimson; padding:10px">
+                    <li class="events">
                         <h3><b><u> Event ${num} </u></b></h3>
                         <h3><b>Date:  </b> ${myDoc.Date} <h3>
                         <h3><b>Description:  </b> ${myDoc.Desc} </h3>
@@ -22,10 +22,10 @@ function showEvents() {
                         <h3><b>Time:  </b> ${myDoc.Time} </h3>
                         <h3><b>Topic:  </b> ${myDoc.topic} </h3>
                         <h3><b>Host:  </b> ${myDoc.host} </h3>
-                    </div>
+                    </li>
                         `
 
-                    $('#events').append(myHtml);
+                    $('#list').append(myHtml);
 
             });
         })
