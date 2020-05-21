@@ -41,7 +41,7 @@ body {
      }
      
      .form-group {
-         margin-left: 0px;
+         margin-left: 100px;
          width: 600px;
          height: 200px;
     
@@ -58,6 +58,7 @@ body {
         #photo {
             height: 200px;
             width: 600px;
+            margin-left: -20px;
            
 
 
@@ -100,18 +101,40 @@ body {
          }
          
          .form-group {
-             margin-left: 200px;
+             margin-left: -200px;
 
         
          }
              
          .btn-primary{
-             margin-left: -210px;
+             margin-left: 170px;
              width: 200px;
     
          }
          .navbar-inverse{
             display: flex;
         }
+        .btn-danger{
+            width: 120px;
+            height: 80px;
+            font-size: 20px;
+            margin-left: 20px;
+
+
+
+        
+        }
+     
+        .btn-success{
+            width: 120px;
+            height: 80px;
+            font-size: 20px;
+            margin-left: 100px;
+
+
+
+        
+        }
+
             
         }
