@@ -25,6 +25,15 @@ body {
  .navbar-inverse{
      display: flex;
  }
+
+ h1{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
 }
  
  @media (min-width: 400px) and (max-width: 1024px){
@@ -44,20 +53,19 @@ body {
          margin-left: 100px;
          width: 600px;
          height: 200px;
+         margin-bottom: -40px;
     
      }
          
      .btn-primary{
          margin-left: 100px;
-         width: 200px;
-         height: 100px;
+       
          font-size: 20pt;
 
         }
 
         #photo {
-            height: 200px;
-            width: 600px;
+            
             margin-left: -20px;
            
 
@@ -83,8 +91,13 @@ body {
         
         }
 
+        h1{
+            text-align: center;
+        }
 
-
+        h2{
+            text-align: center;
+        }
 
     }
 
@@ -134,6 +147,13 @@ body {
 
 
         
+        }
+        h1{
+            text-align: center;
+        }
+
+        h2{
+            text-align: center;
         }
 
             

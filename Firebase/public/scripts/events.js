@@ -13,19 +13,19 @@ function showEvents() {
                     num++;
 
                     let myHtml = `
-                    <div style="border: 1px solid crimson; padding:10px">
-                        <h1><b><u> Event ${num} </u></b></h1>
-                        <h1><b>Date:  </b> ${myDoc.Date} <h1>
-                        <h1><b>Description:  </b> ${myDoc.Desc} </h1>
-                        <h1><b>Duration:  </b> ${myDoc.Duration} </h1>
-                        <h1><b>Location:  </b> ${myDoc.Location} </h1>
-                        <h1><b>Time:  </b> ${myDoc.Time} </h1>
-                        <h1><b>Topic:  </b> ${myDoc.topic} </h1>
-                        <h1><b>Host:  </b> ${myDoc.host} </h1>
-                    </div>
+                    <li class="events">
+                        <h3><b><u> Event ${num} </u></b></h3>
+                        <h3><b>Date:  </b> ${myDoc.Date} <h3>
+                        <h3><b>Description:  </b> ${myDoc.Desc} </h3>
+                        <h3><b>Duration:  </b> ${myDoc.Duration} </h3>
+                        <h3><b>Location:  </b> ${myDoc.Location} </h3>
+                        <h3><b>Time:  </b> ${myDoc.Time} </h3>
+                        <h3><b>Topic:  </b> ${myDoc.topic} </h3>
+                        <h3><b>Host:  </b> ${myDoc.host} </h3>
+                    </li>
                         `
 
-                    $('#events').append(myHtml);
+                    $('#list').append(myHtml);
 
             });
         })
