@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Profile</title>
+    <title>Social Media</title>
     <meta name="comp1800 boilerplate code" content="my bcit project">
     <meta name="author" content="BCIT">
 
@@ -28,7 +28,7 @@
     <!------------------------>
     <!-- Your own CSS files -->
     <!------------------------>
-    <link rel="stylesheet" href="styles/profile.css">   
+    <link rel="stylesheet" href="styles/socialMedia.css">   
     
 
 </head>
@@ -51,34 +51,19 @@
             <li><a href="#">Schedule</a></li>
             <li><a href="postForm.html">Social Media</a></li>
             <li><a href="aboutUs.html">About us</a></li>
-            <li><a href="privateMessage.html">Messages</a></li>
           </ul>
         </div>
       </nav>
-      <div class="fixed-bg">
-        <br><br><br><br><br><br><br><br><br>
-    <div id="outerDiv" class="container">
-        <div id="innerDiv" class="container">
-            <br>
-            <h1>Hello, <span id="user"></span></h1>
-            <br>
-            <h2>Your Profile</h2>
-            <hr>
-          <div class="container" id="innermostDiv">
-            <div class="container" id="profileDiv"><br>
-            <img id="profile" src="images/profile1.png" alt="Profile picture">
-            
-                <br>
-                <h4><b>Name: </b><span id="name"></span></h4><br>
-                <h4><b>Email: </b><span id="email"></span></h4>
-            </div><hr>
-            <div id="other" class="container">
-              <a href="createdEvents.html"><button type="button" id="btn1">Events created by you</button></a><br>
-            </div>
-          </div>
-            <br>
-        </div>
-    </div><br>   
+
+    <div id="outer" class="container">
+      <div id="outerDiv" class="container">
+        <h1>Social Media</h1>
+        <h3>Posts <span><a href="postForm.html"><button id="post">Post Picture</button></a></span></h3>
+        <hr>
+        <div id="postDiv" class="container"></div>
+      </div>
+    </div>
+
 
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, API related    -->
@@ -99,64 +84,15 @@
     <!--------------------------------------------------------------------->
     <!-- JS files: Your own JavaScript functions included here    -->
     <!--------------------------------------------------------------------->
-    <script src="scripts/profile.js"></script>
+    <script src="scripts/socialMedia.js"></script>
 
-     <!--------------------------------------------------------------------->
+    <!--------------------------------------------------------------------->
     <!-- Make calls to your own JavaScript functions, here below-->
     <!---------------------------------------------------------------------->
     <script>
-      showProfile();
+        showImages();
     </script>
 
-
-<!--
-<table id="List">
-  <tbody>
-
-  </tbody>
-
-</table>
-
-    <script>
-
-      var storage = firebase.storage();
-      var storageRef  = storage.ref();
-
-      $('#List').find('tbody').html('');
-
-      var i =0;
-
-     storageRef.child('images/').listAll().then(function(result){
-       result.items.forEach(function(imageRef){
-
-         i++
-         displayImage(i, imageRef);
-       
-       });
-     });
-function displayImage(row, images){
-  images.getDownloadURL().then(function(url){
-    console.log(url);
-
-    let new_html = '';
-    new_html += '<tr>';
-    new_html += '<td>';
-    new_html += row;
-    new_html += '</td>';
-    new_html += '<td>';
-    new_html += '<img src= " '+url+' " width="100px" style= "float:right">';
-    new_html += '</td>';
-    new_html += '</tr>';
-$('#List').find('tbody').append(new_html);
-
-  });
-}
-
-    </script>    -->
-    
-
 </body>
-
-
 
 </html>
