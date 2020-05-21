@@ -1,5 +1,6 @@
 body {
             background-color: lightblue;
+            font-family: 'Roboto', 'Helvetica', sans-serif;
         }
         
         .fixed-bg {
@@ -76,4 +77,6 @@ hr {
     box-shadow: 0 5px lightcyan;
     transform: translateY(4px);
   }
-   
+   body {
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+   }

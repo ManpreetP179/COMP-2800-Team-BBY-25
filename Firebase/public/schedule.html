@@ -1,41 +1,22 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Created Events</title>
-    <meta name="comp1800 boilerplate code" content="my bcit project">
-    <meta name="author" content="BCIT">
-
-    <!----------------------------------------------->
-    <!--  Meta tag for rendering on mobile devices -->
-    <!----------------------------------------------->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
-    <!----------------------------------------------->
-    <!-- CSS: Bootstrap, Firebase, other API -->
-    <!------------------------------------------------>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">  
-    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/schedule.css">
     <link rel="apple-touch-icon" sizes="152x152" href="favicon_package_v0.16 (1)/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon_package_v0.16 (1)/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon_package_v0.16 (1)/favicon-16x16.png">
-    <link rel="manifest" href="favicon_package_v0.16 (1)/site.webmanifest">
-    <link rel="mask-icon" href="favicon_package_v0.16 (1)/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    
-    <!------------------------>
-    <!-- Your own CSS files -->
-    <!------------------------>
-    <link rel="stylesheet" href="styles/createdEvents.css">   
-    
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_package_v0.16 (1)/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon_package_v0.16 (1)/favicon-16x16.png">
+  <link rel="manifest" href="favicon_package_v0.16 (1)/site.webmanifest">
+  <link rel="mask-icon" href="favicon_package_v0.16 (1)/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
 
+    <title>Schedule</title>
 </head>
 <body>
-    <!----------------------->
-    <!--  HTML Section -->
-    <!----------------------->
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
           <div class="navbar-header">
@@ -52,24 +33,22 @@
             <li><a href="socialMedia.html">Social Media</a></li>
             <li><a href="privateMessage.html">Chat</a></li>
             <li><a href="aboutUs.html">About us</a></li>
-           
+          
           </ul>
         </div>
       </nav>
-      <h1>Events you created</h1> 
-            <a href="profile.html"><button id="btn1" type="button">Go back to profile</button></a><br><hr>
-    <div id="outerDiv" class="container">
-            <br><br>
-            <div id="background">
-              <br><br>
-            
-            <div id="myDiv"></div>
-
-    </div>   
+    <h1><b><center>Schedule</center></b></h1>
+    <div class="background">
+        <br><br>
+    <div class="container">
+        <ul id = "list">
+          
+        </ul>
     </div>
-
+    </div>
+    
     <!----------------------------------------------->
-    <!-- JS: Boostrap, Firebase, API related    -->
+    <!-- JS: Boostrap, Firebase, API related       -->
     <!----------------------------------------------->
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -83,20 +62,16 @@
     <script src="scripts/firebase.js"> </script>
   
     <!--------------------------------------------------------------------->
-    <!-- JS files: Your own JavaScript functions included here    -->
+    <!-- JS files: Your own JavaScript functions included here           -->
     <!--------------------------------------------------------------------->
-    <script src="scripts/createdEvents.js"></script>
+    <script src="scripts/schedule.js"></script>
 
-     <!--------------------------------------------------------------------->
-    <!-- Make calls to your own JavaScript functions, here below-->
-    <!---------------------------------------------------------------------->
+    <!--------------------------------------------------------------------->
+    <!-- Make calls to your own JavaScript functions, here below         -->
+    <!--------------------------------------------------------------------->
 
     <script>
-        showEvents();  
+        showSchedule();
     </script>
-
-</body>
-
-
-
-</html>
+    </body>
+    </html>

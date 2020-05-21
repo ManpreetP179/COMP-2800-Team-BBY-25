@@ -1,6 +1,6 @@
 html, body {
     font-family: 'Roboto', 'Helvetica', sans-serif;
-    background: skyblue;
+    background-color: lightskyblue;
   }
   main, #messages-card {
     height: 100%;
@@ -109,7 +109,7 @@ html, body {
     min-height: 0;
   }
   .mdl-card {
-    background: linear-gradient(white, #f9f9f9);
+    background-color: linear-gradient(lightcyan, #f9f9f9);
     justify-content: space-between;
   }
   #user-container {
@@ -162,7 +162,7 @@ html, body {
     }
     #user-container {
       top: 72px;
-      background-color: rgb(3,155,229);
+      background-color:#3D5A85;
       height: 38px;
       padding-top: 3px;
       padding-right: 2px;

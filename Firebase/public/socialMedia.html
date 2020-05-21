@@ -14,7 +14,7 @@
     <!----------------------------------------------->
     <!-- CSS: Bootstrap, Firebase, other API -->
     <!------------------------------------------------>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
 
     <link rel="apple-touch-icon" sizes="152x152" href="favicon_package_v0.16 (1)/apple-touch-icon.png">
@@ -37,30 +37,32 @@
     <!--  HTML Section -->
     <!----------------------->
     <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="#"><img src="images/logo.png" height="30px" width="35px"></a>
-            <a class="navbar-brand" href="#">Together at Home</a>
-          </div>
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="mainPage.html">Home</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="profile.html">Profile</a></li>
-            <li><a href="eventsPage.html">Create Events</a></li>
-            <li><a href="eventList.html">Events</a></li>
-            <li><a href="#">Schedule</a></li>
-            <li><a href="postForm.html">Social Media</a></li>
-            <li><a href="aboutUs.html">About us</a></li>
-          </ul>
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#"><img src="images/logo.png" height="30px" width="35px"></a>
+          <a class="navbar-brand" href="#">Together at Home</a>
         </div>
-      </nav>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="mainPage.html">Home</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="eventsPage.html">Create Events</a></li>
+          <li><a href="eventList.html">Events</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="socialMedia.html">Social Media</a></li>
+          <li><a href="privateMessage.html">Chat</a></li>
+          <li><a href="aboutUs.html">About us</a></li>
+        </ul>
+      </div>
+    </nav>
 
     <div id="outer" class="container">
       <div id="outerDiv" class="container">
-        <h1>Social Media</h1>
-        <h3>Posts <span><a href="postForm.html"><button id="post">Post Picture</button></a></span></h3>
+        <h1><b>Social Media</b></h1>
+        <h3><b>Posts </b><span><a href="postForm.html"><button id="post">Post Picture</button></a></span></h3><br>
         <hr>
         <div id="postDiv" class="container"></div>
+        <br>
       </div>
     </div>
 
@@ -91,6 +93,10 @@
     <!---------------------------------------------------------------------->
     <script>
         showImages();
+        function post() {
+        document.getElementById("post").style.backgroundColor="blue";
+        }
+        document.getElementById("post").onclick=post;
     </script>
 
 </body>

@@ -11,14 +11,14 @@ function event() {
     var place_event = document.getElementById('textbox8').value;
     db.collection("events").add(
         {
-            name: name_event,
+            Name: name_event,
             topic: topic_event,
-            desc: desc_event,
-            date: date_event,
-            time:time_event,
-            duration:duration_event,
+            Desc: desc_event,
+            Date: date_event,
+            Time:time_event,
+            Duration:duration_event,
             host:host_event,
-            place:place_event
+            Location:place_event
         })
       .then (function() {
     console.log("Event added to database");
