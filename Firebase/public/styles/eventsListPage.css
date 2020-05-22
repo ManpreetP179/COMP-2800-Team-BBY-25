@@ -10,6 +10,8 @@ body {
 .container{
     border: 2px solid darkblue;
     background-color:lightcyan ;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 #events{
     background-image: url("https://img.freepik.com/free-vector/abstract-galaxy-background_1199-247.jpg?size=626&ext=jpg"); 
