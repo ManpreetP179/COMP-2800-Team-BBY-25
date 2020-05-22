@@ -1,0 +1,26 @@
+body {
+    background-color: lightblue;
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+}
+.background {
+    background-color: #3D5A85;
+    width:1300px;
+    margin-left: 100px;
+}
+.container{
+    border: 2px solid darkblue;
+    background-color:lightcyan ;
+
+}
+#schedule{
+   background-image: url("https://img.freepik.com/free-vector/abstract-galaxy-background_1199-247.jpg?size=626&ext=jpg"); 
+  color:white;
+    border-radius: 3px;
+    border-color: darkblue;
+    -moz-box-shadow:    3px 3px 5px 6px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow:         3px 3px 5px 6px #ccc;
+    width: 500px;
+    height: 300px;
+    
+}
