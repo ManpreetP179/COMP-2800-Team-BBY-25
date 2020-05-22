@@ -1,5 +1,4 @@
 function showEvents() {
-
     console.log("in show events");
     let events = false;
 

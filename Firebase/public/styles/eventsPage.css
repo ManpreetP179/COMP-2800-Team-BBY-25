@@ -63,12 +63,12 @@
     transform: translateY(4px);
   }
   #event{
-      margin-left: 450px;
+      margin-left: 50px;
       border-style: solid;
       border-width:5px;
       border-color:darkblue;
       width:600px;
-      background-color: whitesmoke;
+      background-color: lightcyan;
   }
   #lbl{
       margin-left: 60px;
@@ -78,4 +78,11 @@
   }
   body {
       background-color: lightblue;
+      font-family: 'Roboto', 'Helvetica', sans-serif;
+  }
+  #background {
+      background-color: #3D5A85;
+      height:750px;
+      width:700px;
+      margin-left:425px;
   }
