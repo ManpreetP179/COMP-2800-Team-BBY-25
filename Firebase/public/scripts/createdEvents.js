@@ -10,12 +10,9 @@ function showEvents() {
         db.collection("events").where("user", "==", myUser)
         .get()
         .then(function(querySnapshot) {
-            console.log("in then");
             querySnapshot.forEach(function(doc) {
-                console.log("in for each");
                 events = true;
                 let myDoc = doc.data();
-                console.log(myDoc);
 
                 num++;
 
