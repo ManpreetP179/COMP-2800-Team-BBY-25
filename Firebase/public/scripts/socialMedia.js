@@ -1,5 +1,5 @@
 function showImages() {
-    
+
 var storage = firebase.storage();
 var storageRef  = storage.ref();
 
@@ -17,7 +17,7 @@ storageRef.child('images/').listAll().then(function(result){
 });
 function displayImage(row, images){
 images.getDownloadURL().then(function(url){
-console.log(url);
+  console.log(url);
 
 let new_html = '';
 new_html += '<tr>';

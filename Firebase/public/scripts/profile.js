@@ -2,7 +2,7 @@
 function showProfile(){
 
   firebase.auth().onAuthStateChanged(function (user) {
-        
+       
     db.collection("users").doc(user.uid)
     .get()
     .then(function(doc) {

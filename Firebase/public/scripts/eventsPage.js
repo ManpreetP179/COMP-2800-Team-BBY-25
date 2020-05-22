@@ -26,8 +26,11 @@ function event() {
       .then (function() {
     console.log("Event added to database");
       })
-      .catch (function(error){
-          console.log("Error in document",error);
-      });
+    .then (function() {
+  console.log("Event added to database");
+    })
+    .catch (function(error){
+        console.log("Error in document",error);
+    });
 }
 document.getElementById("btn").onclick = event;

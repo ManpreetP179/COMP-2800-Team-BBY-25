@@ -1,4 +1,5 @@
 function showEvents() {
+
     firebase.auth().onAuthStateChanged(function() {
         let num = 0;
         
@@ -15,18 +16,13 @@ function showEvents() {
                     let myHtml = `
                     <li id="events">
                         <h3><b><u> Event ${num} </u></b></h3>
-                        <h3><b>Name:  </b> ${myDoc.Name} <h3>
-                        <h3><b>Topic:  </b> ${myDoc.topic} </h3>
-                        <h3><b>Description:  </b> ${myDoc.Desc} </h3>
                         <h3><b>Date:  </b> ${myDoc.Date} <h3>
-                        <h3><b>Time:  </b> ${myDoc.Time} </h3>
+                        <h3><b>Description:  </b> ${myDoc.Desc} </h3>
                         <h3><b>Duration:  </b> ${myDoc.Duration} </h3>
-                        <h3><b>Host:  </b> ${myDoc.host} </h3>
                         <h3><b>Location:  </b> ${myDoc.Location} </h3>
-                       
-                       
-                        
-                        
+                        <h3><b>Time:  </b> ${myDoc.Time} </h3>
+                        <h3><b>Topic:  </b> ${myDoc.topic} </h3>
+                        <h3><b>Host:  </b> ${myDoc.host} </h3>
                     </li>
                         `
                         
