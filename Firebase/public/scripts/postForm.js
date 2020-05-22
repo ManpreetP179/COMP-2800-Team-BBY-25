@@ -1,10 +1,7 @@
 
 function post() {
 
-    //alert("in post fun");
-    console.log("in post");
     let caption = document.getElementById("inputCaption").value;
-    console.log(caption);
     let user = firebase.auth().currentUser.uid;
     
     db.collection("posts").add({
