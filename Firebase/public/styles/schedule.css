@@ -10,6 +10,8 @@ body {
 .container{
     border: 2px solid darkblue;
     background-color:lightcyan ;
+    padding-top: 30px;
+    padding-bottom: 30px;
 
 }
 #schedule{
