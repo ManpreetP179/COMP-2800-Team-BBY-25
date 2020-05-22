@@ -1,5 +1,7 @@
 
 function event() {
+    let user = firebase.auth().currentUser.uid;
+
     console.log("Events Page");
     var name_event = document.getElementById('textbox1').value;
     var topic_event = document.getElementById('textbox2').value;
@@ -18,7 +20,8 @@ function event() {
             Time:time_event,
             Duration:duration_event,
             host:host_event,
-            Location:place_event
+            Location:place_event,
+            user: user
         })
       .then (function() {
     console.log("Event added to database");
