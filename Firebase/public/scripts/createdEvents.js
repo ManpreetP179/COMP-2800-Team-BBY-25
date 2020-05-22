@@ -1,24 +1,29 @@
 function showEvents() {
-    console.log("in show events");
+
+    const { Timber } = require("@timberio/node");
+
+    const logger = new Timber("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwczovL2FwaS50aW1iZXIuaW8vIiwiZXhwIjpudWxsLCJpYXQiOjE1OTAxMTExMTcsImlzcyI6Imh0dHBzOi8vYXBpLnRpbWJlci5pby9hcGlfa2V5cyIsInByb3ZpZGVyX2NsYWltcyI6eyJhcGlfa2V5X2lkIjo4MDM2LCJ1c2VyX2lkIjoiYXBpX2tleXw4MDM2In0sInN1YiI6ImFwaV9rZXl8ODAzNiJ9.KbXP0ycxc0efKJN_Gjuc53ppPj7LYLlZKJTjitlEBuY", "37829", {ignoreExceptions: true});
+
+    logger.info("in show events");
     let events = false;
 
     firebase.auth().onAuthStateChanged(function(user) {
-        console.log("in user");
+        logger.info("in user");
         // console.log(user.uid);
         let myUser = user.uid;
-        console.log(myUser);
+        logger.info(myUser);
 
         let num = 0;
         
         db.collection("events").where("user", "==", myUser)
         .get()
         .then(function(querySnapshot) {
-            console.log("in then");
+            logger.info("in then");
             querySnapshot.forEach(function(doc) {
-                console.log("in for each");
+                logger.info("in for each");
                 events = true;
                 let myDoc = doc.data();
-                console.log(myDoc);
+                logger.info(myDoc);
 
                 num++;
 
@@ -62,12 +67,12 @@ function showEvents() {
         })
         .then(function() {
             if(events == false) {
-                console.log("No events created yet");
+                logger.info("No events created yet");
                 $("#myDiv").append('<h3>No events created yet</h3>')
             }
         })
         .catch(function(error) {
-            console.log("Error getting documents", error);
+            logger.info("Error getting documents", error);
         });
 
     });
