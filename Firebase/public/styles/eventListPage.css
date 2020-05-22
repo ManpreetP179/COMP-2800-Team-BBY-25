@@ -4,7 +4,6 @@ body {
 }
 .background {
     background-color: #3D5A85;
-    height:1970px;
     width:1300px;
     margin-left: 100px;
 }
@@ -17,7 +16,7 @@ body {
    background-image: url("https://img.freepik.com/free-vector/abstract-galaxy-background_1199-247.jpg?size=626&ext=jpg"); 
    background-repeat: no-repeat;
    background-size: cover;
-  color:white;
+    color:white;
     border-radius: 3px;
     border-color: darkblue;
     -moz-box-shadow:    3px 3px 5px 6px #ccc;
