@@ -13,15 +13,21 @@ body {
 
 }
 #schedule{
-   background-image: url("https://img.freepik.com/free-vector/abstract-galaxy-background_1199-247.jpg?size=626&ext=jpg"); 
-  color:white;
+    background-image: url("https://img.freepik.com/free-vector/abstract-galaxy-background_1199-247.jpg?size=626&ext=jpg"); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:white;
     border-radius: 3px;
     border-color: darkblue;
     -moz-box-shadow:    3px 3px 5px 6px #ccc;
     -webkit-box-shadow: 3px 3px 5px 6px #ccc;
     box-shadow:         3px 3px 5px 6px #ccc;
     width: 500px;
-    height: 300px;
+    height: 450px;
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 15px;
     
 }
 
