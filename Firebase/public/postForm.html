@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/mainPage.css" type="text/css">
+  <link rel="stylesheet" href="styles/easterEgg.css" type="text/css">   
+ 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="apple-touch-icon" sizes="152x152" href="favicon_package_v0.16 (1)/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_package_v0.16 (1)/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon_package_v0.16 (1)/favicon-16x16.png">
+  <link rel="manifest" href="favicon_package_v0.16 (1)/site.webmanifest">
+  <link rel="mask-icon" href="favicon_package_v0.16 (1)/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="styles/postForm.css"> 
+    <style>
+    
+      
+    
+    
+    
+    
+    </style>
+    <!------------------------>
+    <!-- Your own CSS files -->
+    <!-----------------------
+    <link rel="stylesheet" href="styles/style.css">   -->
+
+</head>
+<body>
+    <!----------------------->
+    <!--  HTML Section -->
+    <!----------------------->
+    
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#"><img src="images/logo.png" height="30px" width="35px"></a>
+            <a class="navbar-brand" href="#">Together at Home</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="mainPage.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="eventsPage.html">Create Events</a></li>
+            <li><a href="eventList.html">Events</a></li>
+            <li><a href="#">Schedule</a></li>
+            <li><a href="socialMedia.html">Social Media</a></li>
+            <li><a href="privateMessage.html">Messages</a></li>
+            <li><a href="aboutUs.html">About us</a></li>
+          </ul>
+        </div>
+        </nav>
+        <h1> Please post a picture you'd like to share</h1>
+    
+    <div class="container">
+       
+                        <div class="form-group">
+                            <img id="photo" class="rounded-circle mx-auto d-block border border-primary"
+                                src="upload.png"
+                                style="max-width: 150px; margin-left: 285px;  border: px solid cornsilk!important; ">
+                            <input type="file" id="file" style="display: none;">
+                        </div>
+                        
+<!--                       
+<!--                        click to finish profile-->
+                        <div class="form-group text-center">
+                            <button type="button" class="btn-primary"> Post picture</button>
+                        </div>
+                    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous">
+    </script>  
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-storage.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDfdy4eeQA-kzFh5U-6Dl9dsvCxJCiYU2I",
+  authDomain: "team25-52eec.firebaseapp.com",
+  databaseURL: "https://team25-52eec.firebaseio.com",
+  projectId: "team25-52eec",
+  storageBucket: "team25-52eec.appspot.com",
+  messagingSenderId: "744979759825",
+  appId: "1:744979759825:web:fdb78ef312d8ea8370fbf0"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        var db = firebase.firestore();
+    </script>
+    <script>
+        
+        $(function () {
+            $('#photo').click(function () {
+                $('#file').click();
+            });
+            $('#file').on('change', function () {
+                if (event.target.files.length == 0) {
+                    return;
+                }
+                $('#photo').attr('src', URL.createObjectURL(event.target.files[0]));
+            });
+            $('button').click(function () {
+                input_fields = ['pic_id'
+                ];
+                
+                
+                var storageRef = firebase.storage().ref();
+                file = $('#file')[0].files[0];
+                // Create a reference to the '.jpg'
+                var photoRef = storageRef.child( 'images/' +uid + '.jpg' + new Date().getTime() + file.name);
+                photoRef.put(file).then(function (snapshot) {
+                    var usersRef = db.collection("images");
+                    usersRef.doc(uid).set({
+                            pic_id: uid,
+                            
+                           
+                        }).then(function () {
+                            console.log("Document successfully written!");
+                            alert("Document successfully written!")
+                           // location.href = 'profile.html';
+                        })
+                        .catch(function (error) {
+                            console.error("Error writing document: ", error);
+                        });
+                }).catch(function (error) {
+                    console.error("Error writing document: ", error);
+                });
+
+            });
+           
+        
+
+            // Points to the root reference
+            // var storageRef = firebase.storage().ref();
+
+            // // Points to 'images'
+            // var imagesRef = storageRef.child('images');
+
+            // // Points to 'images/space.jpg'
+            // // Note that you can use variables to create child values
+            // var fileName = 'space.jpg';
+            // var spaceRef = imagesRef.child(fileName);
+
+            // // File path is 'images/space.jpg'
+            // var path = spaceRef.fullPath
+
+            // // File name is 'space.jpg'
+            // var name = spaceRef.name
+
+            // // Points to 'images'
+            // var imagesRef = spaceRef.parent;
+        });
+        var uid;
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                console.log('signed in');
+                if (user != null) {
+                    name = user.displayName;
+                    email = user.email;
+                    //photoUrl = user.photoURL;
+                    uid = user.uid;
+                    $('#name').val(name);
+                    $('#email').val(email);
+                    db.collection("images").where("pic_id", "==", uid)
+                        .get()
+                        //data is retrieved from the collection "users" and
+                        //sent to the main.html. This would include the user type
+                        // (barber or customer), their name, exp, age, gender, etc
+                        .then(function (querySnapshot) {
+                            if (querySnapshot.size > 0) {
+                                //location.href = 'profile.html';
+                            }
+                            // querySnapshot.forEach(function (doc) {
+                            //     // doc.data() is never undefined for query doc snapshots
+                            //     console.log(doc.id, " => ", doc.data());
+                            // });
+                        })
+                        .catch(function (error) {
+                            console.log("Error getting documents: ", error);
+                        });
+                }
+            } else {
+                console.log('not signed');
+                location.href = 'login1.html';
+                // No user is signed in.
+            }
+        });        
+    </script>
+    <h2>Posts can be seen in the Social Media page.</h2>
+    
+    
+
+    <!-- <div class="container">
+=======
+    
+ <!--   <div class="container">
+>>>>>>> dac8984ffec95fa3315cfbd1a3a19ee4d26724d0
+        <br><br>
+        <h2>Enter details to post</h2>
+        <br><hr><br>
+        <form>
+            <div class="form-group row">
+                <label for="inputCaption" class="col-sm-2 col-form-label">Caption</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputCaption" placeholder="Caption">
+                </div>
+            </div>
+        
+            <div class="form-group row">
+                <div class="col-sm-10 offset-sm-2">
+                    <button type="button" class="btn-danger">Cancel</button>
+                    <button type="button" class="btn-success" id="post">Post</button>
+                </div>
+            </div>
+        </form>   
+
+    </div>     -->
+    
+
+    <!----------------------------------------------->
+    <!-- JS: Boostrap, Firebase, API related    -->
+    <!----------------------------------------------->
+    
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+ <!--  <script src="scripts/firebase.js"> </script>    -->
+    
+  
+    <!--------------------------------------------------------------------->
+    <!-- JS files: Your own JavaScript functions included here    -->
+    <!--------------------------------------------------------------------->
+   
+
+     <!--------------------------------------------------------------------->
+    <!-- Make calls to your own JavaScript functions, here below-->
+    <!---------------------------------------------------------------------->
+
+<!--    <script>
+        document.getElementById("post").onclick = post;
+     
+
+
+    
+
+    </script> 
+
+    </script>    -->
+
+
+    
+    
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Profile</title>
+    <meta name="comp1800 boilerplate code" content="my bcit project">
+    <meta name="author" content="BCIT">
+
+    <!----------------------------------------------->
+    <!--  Meta tag for rendering on mobile devices -->
+    <!----------------------------------------------->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!----------------------------------------------->
+    <!-- CSS: Bootstrap, Firebase, other API -->
+    <!------------------------------------------------>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">  
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon_package_v0.16 (1)/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_package_v0.16 (1)/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_package_v0.16 (1)/favicon-16x16.png">
+    <link rel="manifest" href="favicon_package_v0.16 (1)/site.webmanifest">
+    <link rel="mask-icon" href="favicon_package_v0.16 (1)/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    
+    <!------------------------>
+    <!-- Your own CSS files -->
+    <!------------------------>
+    <link rel="stylesheet" href="styles/profile.css">   
+    
+
+</head>
+<body>
+    <!----------------------->
+    <!--  HTML Section -->
+    <!----------------------->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#"><img src="images/logo.png" height="30px" width="35px"></a>
+            <a class="navbar-brand" href="#">Together at Home</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="mainPage.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="eventsPage.html">Create Events</a></li>
+            <li><a href="eventList.html">Events</a></li>
+            <li><a href="#">Schedule</a></li>
+            <li><a href="socialMedia.html">Social Media</a></li>
+            <li><a href="privateMessage.html">Messages</a></li>
+            <li><a href="aboutUs.html">About us</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="fixed-bg">
+        <br><br><br><br><br><br><br><br><br>
+    <div id="outerDiv" class="container">
+        <div id="innerDiv" class="container">
+            <br>
+            <h1>Hello, <span id="user"></span></h1>
+            <br>
+            <h2>Your Profile</h2>
+            <hr>
+          <div class="container" id="innermostDiv">
+            <div class="container" id="profileDiv"><br>
+            <img id="profile" src="images/profile1.png" alt="Profile picture">
+            
+                <br>
+                <h4><b>Name: </b><span id="name"></span></h4><br>
+                <h4><b>Email: </b><span id="email"></span></h4>
+            </div><hr>
+            <div id="other" class="container">
+              <a href="createdEvents.html"><button type="button" id="btn1">Events created by you</button></a><br>
+            </div>
+          </div>
+            <br>
+        </div>
+    </div><br>   
+
+    <!----------------------------------------------->
+    <!-- JS: Boostrap, Firebase, API related    -->
+    <!----------------------------------------------->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase.js"></script>
+    <script src="scripts/firebase.js"> </script>
+  
+    <!--------------------------------------------------------------------->
+    <!-- JS files: Your own JavaScript functions included here    -->
+    <!--------------------------------------------------------------------->
+    <script src="scripts/profile.js"></script>
+
+     <!--------------------------------------------------------------------->
+    <!-- Make calls to your own JavaScript functions, here below-->
+    <!---------------------------------------------------------------------->
+    <script>
+      showProfile();
+    </script>
+
+
+<!--
+<table id="List">
+  <tbody>
+
+  </tbody>
+
+</table>
+
+    <script>
+
+      var storage = firebase.storage();
+      var storageRef  = storage.ref();
+
+      $('#List').find('tbody').html('');
+
+      var i =0;
+
+     storageRef.child('images/').listAll().then(function(result){
+       result.items.forEach(function(imageRef){
+
+         i++
+         displayImage(i, imageRef);
+       
+       });
+     });
+function displayImage(row, images){
+  images.getDownloadURL().then(function(url){
+    console.log(url);
+
+    let new_html = '';
+    new_html += '<tr>';
+    new_html += '<td>';
+    new_html += row;
+    new_html += '</td>';
+    new_html += '<td>';
+<<<<<<< HEAD
+    new_html += '<img src= " '+url+' " width="500px" style= "border 1px solid black">';
+=======
+    new_html += '<img src= " '+url+' " width="100px" style= "float:right">';
+>>>>>>> dac8984ffec95fa3315cfbd1a3a19ee4d26724d0
+    new_html += '</td>';
+    new_html += '</tr>';
+$('#List').find('tbody').append(new_html);
+
+  });
+}
+
+    </script>    -->
+    
+
+</body>
+
+
+
+</html>
