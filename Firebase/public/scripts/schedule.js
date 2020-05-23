@@ -1,5 +1,5 @@
+//function to retrieve date,day and time of event from the database.
 function showSchedule() {
-
     firebase.auth().onAuthStateChanged(function() {
         let num = 0;
         

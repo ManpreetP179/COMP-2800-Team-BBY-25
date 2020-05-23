@@ -92,13 +92,12 @@ html {
   }
   #main {
     background-image: url(https://cdn2.vectorstock.com/i/1000x1000/25/26/abstract-backgrounds-geometric-shape-pattern-vector-5862526.jpg);
-    height:600px;
+    
     width:100%;
 
   }
   #content {
-    height:500px;
-    width:1300px;
+    
     background-color:lightskyblue;
     margin-left: 100px;
   
@@ -110,7 +109,7 @@ html {
     opacity: 0.4;
     height:500px;
     width:600px;
-    margin-left:800px;
+    
   }
   h1{
     font-family: 'Times New Roman', Times, serif;
@@ -120,11 +119,11 @@ html {
   }
   #heading {
 font-weight: bolder;
-margin-left: 530px;
+text-align: center;
   }
   #head1 {
     color:darkblue;
-    margin-left: 510px;
+    text-align: center;
   }
   h3{
     font-family: 'Times New Roman', Times, serif;
@@ -135,13 +134,13 @@ margin-left: 530px;
   }
   #feature {
     display:grid;
-  grid-template-columns: 760px 400px;
+  grid-template-columns: 1fr 1fr;
   background-color: whitesmoke;
   color:darkblue;
   }
   #img1,#img2,#img3 {
     height:400px;
-    width:760px;
+    width: 50vw;
   }
   #create_event{
     color:black;

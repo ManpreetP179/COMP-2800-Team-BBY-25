@@ -4,15 +4,14 @@
             Events Page
         </title>
       
-   
+   <!----------------------------------------------->
+    <!-- All stylesheets and favicon ---->
+    <!----------------------------------------------->
     
             <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
            
            <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
      
-            
-           
-            <script src="scripts/firebase.js"></script>
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="styles/eventsPage.css" type="text/css">
@@ -30,6 +29,9 @@
         
     </head>
     <body>
+      <!----------------------------------------------->
+      <!---------Navbar--------------------------------->
+      <!----------------------------------------------->
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
               <div class="navbar-header">
@@ -49,44 +51,69 @@
               </ul>
             </div>
           </nav>
-          
-        <br> <br>
+    <!----------------------------------------------->
+    <!----Form for event------>
+    <!----------------------------------------------->
+          <h1 id="title">Create Event</h1>
+  
+        <div id="background">
+          <br><br>
         <div id="event">
-            <h1 id="head">Create your own event</h1>
+            <h1 id="head"><b>Create your own event</b></h1>
             <br>
         <form id="add_events">
         <label id="lbl">Name of event</label>
-        <input type="textarea" id="textbox1" name="name">
+        <input type="textarea" id="textbox1" name="Name">
         <br><br>
         <label id="lbl">Topic of event</label>
         <input type="textarea" id="textbox2" name="topic">
         <br><br>
         <label id="lbl">Description of event</label>
         <br><br>
-        <textarea rows=5 cols=50 id="txt" name="desc"></textarea>
+        <textarea rows=5 cols=50 id="txt" name="Desc"></textarea>
         <br><br>
         <label id="lbl">Date of event</label>
-        <input type="date" id="textbox3" name="date">
+        <input type="date" id="textbox3" name="Date">
         <br><br>
         <label id="lbl">Time of event</label>
-        <input type="time" id="textbox4" name="time">
+        <input type="time" id="textbox4" name="Time">
         <br><br>
         
         <label id="lbl">Duration of event</label>
-        <input type="textarea" id="textbox6" name="duration">
+        <input type="textarea" id="textbox6" name="Duration">
         <br><br>
         <label id="lbl">Host of event</label>
         <input type="textarea" id="textbox7" name="host">
         <br><br>
         <label id="lbl">Place of event</label>
-        <input type="textarea" id="textbox8" name="place">
+        <input type="textarea" id="textbox8" name="Location">
         <br><br>
         <button type="button" id ="btn">Create Event</button>
         </form>
         </div>
-
+</div>
         </form>
-        <script src="scripts/eventsPage.js"></script>
+
+
+    <!----------------------------------------------->
+    <!-- JS: Boostrap, Firebase, API related    -->
+    <!----------------------------------------------->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase.js"></script>
+    <script src="scripts/firebase.js"> </script>
+
+
+
+    <script src="scripts/eventsPage.js"></script>
       
      
     </body>

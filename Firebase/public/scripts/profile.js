@@ -1,4 +1,4 @@
-
+//retrieving email address and name of user in profile from the database.
 function showProfile(){
 
   firebase.auth().onAuthStateChanged(function (user) {
@@ -7,8 +7,6 @@ function showProfile(){
     .get()
     .then(function(doc) {
         let user = doc.data();
-        console.log(user.name);
-        console.log(user.email);
         document.getElementById("user").innerHTML = user.name;
         document.getElementById("name").innerHTML = user.name;
         document.getElementById("email").innerHTML = user.email;
