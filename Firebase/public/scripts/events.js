@@ -1,3 +1,5 @@
+//function to retrive data of the details of the website from the database and show in eventList page
+
 function showEvents() {
 
     firebase.auth().onAuthStateChanged(function() {

@@ -3,3 +3,4 @@ importScripts('/__/firebase/7.14.4/firebase-messaging.js');
 importScripts('/__/firebase/init.js');
 
 firebase.messaging();
+//firebase setup for chat feature

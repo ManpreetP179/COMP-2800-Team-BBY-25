@@ -1,3 +1,4 @@
+//function to move a pair of scissors using setinterval
 
 function myMove() {
   var elem = document.getElementById("scissors");   

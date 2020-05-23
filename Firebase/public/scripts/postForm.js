@@ -1,4 +1,4 @@
-
+//storing posts in the database.
 function post() {
 
     let caption = document.getElementById("inputCaption").value;
