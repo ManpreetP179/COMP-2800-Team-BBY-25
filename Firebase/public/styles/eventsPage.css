@@ -107,3 +107,18 @@
     padding: 50px;
     margin-right: 0px;
 }
+@media (max-width: 770px) {
+    #event {
+        margin-left:15px;
+        width:300px;
+        
+    }
+    #head {
+        width:20px;
+        margin-left:10px;
+}
+#background {
+    width:200px;
+    margin-left:10px;
+}
+}

@@ -1,3 +1,4 @@
+//function to retrive images from the storage.
 function showImages() {
 
 var storage = firebase.storage();

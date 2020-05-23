@@ -1,3 +1,4 @@
+//function to retrive data for the details of the events from the database
 function showEvents() {
     
     let events = false;
@@ -6,7 +7,7 @@ function showEvents() {
     
         let myUser = user.uid;
         let num = 0;
-        
+        //retrieving data from events collection.
         db.collection("events").where("user", "==", myUser)
         .get()
         .then(function(querySnapshot) {

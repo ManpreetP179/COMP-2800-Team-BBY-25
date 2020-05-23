@@ -1,4 +1,4 @@
-
+//Storing data of the details of the event in the database.
 function event() {
     let user = firebase.auth().currentUser.uid;
 
